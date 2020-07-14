@@ -69,7 +69,7 @@ class SVM:
                     
             if error_new < error:
                 error = error_new
-                print(e)
+                #print(e)
             # stop when validation error doesn't improve
             else:
                 break
