@@ -13,6 +13,8 @@ import softmax
 import utils
 import svm
 import neural_net
+import logReg
+import kernel
 
 
 def load_dataset(filename):
@@ -96,9 +98,7 @@ if __name__ == '__main__':
         print("When batch size is {0}, alpha is {1}, test error is {2}".format(best_batch, 
               best_alpha, 
               utils.classification_error(model.predict(Xtest), ytest)))
-        
-    #elif Model == 'rbf':
-        
+
 
     elif Model == 'svm':
         
@@ -142,10 +142,7 @@ if __name__ == '__main__':
               best_alpha, 
               utils.classification_error(model.predict(Xtest), ytest)))
                         
-    elif Model == 'MLP':
-        
-        #X, mu, sigma = utils.standardize_cols(X)
-        #Xtest, _, _ = utils.standardize_cols(Xtest, mu, sigma)
+    elif Model == 'mlp':
         
         # MLP
         hidden_layer_sizes = [50]
